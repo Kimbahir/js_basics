@@ -1,7 +1,20 @@
-let username
+const decreaseBtn = document.getElementById('decreaseBtn');
+const increaseBtn = document.getElementById('increaseBtn');
+const resetBtn = document.getElementById('resetBtn');
+const countLbl = document.getElementById('countLbl');
+let count = 0
 
-document.getElementById('myButton').onclick = function() {
-    username = document.getElementById('myText').value;
-    document.getElementById('myH1').textContent = `Hello ${username}`;
-    console.log(username)
+increaseBtn.onclick = function() {
+    count++;
+    countLbl.textContent = count;
+}
+
+decreaseBtn.onclick = function() {
+    count--;
+    countLbl.textContent = count;
+}
+
+resetBtn.onclick = function() {
+    count = 0;
+    countLbl.textContent = count;
 }
