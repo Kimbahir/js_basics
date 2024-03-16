@@ -7,6 +7,6 @@ body {
     padding: 5px 25px;
     border-radius: 5px;
 }
-#rollLbl {
+.rollLbl {
     font-size: 5em;
 }
