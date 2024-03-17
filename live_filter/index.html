@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Filter</title>
+</head>
+<body>
+<input type="text" id="textInput" placeholder="Type here...">
+<br>
+<label for="textInput" id="resultLabel"></label>
+
+<script>
+    const textsArray = ['test', 'testing', 'oister', 'template'];
+    const textBox = document.getElementById('textInput');
+    const resultLabel = document.getElementById('resultLabel');
+
+    textBox.addEventListener('input', function() {
+        const searchText = textBox.value.toLowerCase();
+        const filteredTexts = textsArray.filter(text => text.includes(searchText));
+        resultLabel.innerHTML = filteredTexts.map(text => {
+            return text.replace(new RegExp(searchText, 'gi'), '<strong>' + searchText + '</strong>');
+        }).join('<br>');
+    });
+</script>
+</body>
+</html>
