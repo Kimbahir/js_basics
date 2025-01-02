@@ -11,27 +11,38 @@
 </head>
 
 <body>
-    <form action="#">
-        <h1>Axios Example Page</h1>
-        Admin key: <input type="text" id="admin-key" value="password">
-        <button id="get-data" onclick="listUsers()">Get Data</button>
-    </form>
-    <h2>Users</h2>
+    <h2>Metadata</h2>
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Actions</th>
+                <th>Key</th>
+                <th>Value</th>
             </tr>
         </thead>
-        <tbody id="userList">
+        <tbody id="metadata">
+            <tr>
+                <td>Name:</td><td><label id="image_name"></label></td>
+            </tr>
+            <tr>
+                <td>Shared with:</td><td><label id="shared_with"></label></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Datetime</th>
+                <th>Request</th>
+            </tr>
+        </thead>
+        <tbody id="tblLog">
 
         </tbody>
     </table>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("admin-key").focus();
+            showImageInfo();
         });
     </script>
 </body>
