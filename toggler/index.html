@@ -1,0 +1,25 @@
+<!-- basic html file -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggler</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- include the index.js -->
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>Test</h1>
+    <div id="togglerContainer">
+        <div id="togglerText">OFF</div>
+    </div>
+    <div id="toggler">
+        <!-- a button that calls toggleToggleBox -->
+        <button id="btnToggle" value="asd" onclick="toggleTogglerBox('togglerText')">Toggle</button>
+    </div>
+    <div id="colorBox" style="background-color: red; width: 100px; height: 100px;">Testing</div>
+    <input id="colorInput" type="text" placeholder="Enter color">
+    <button onclick="changeColor('colorBox')">Change Color</button>
+</body>
+</html>
