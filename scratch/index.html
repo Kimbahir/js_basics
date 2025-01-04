@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <span id="info" ></span>
+    <h1>User list</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                User name: <input type="text" id="name" class="form-control">
+                Age: <input type="text" id="age" class="form-control">
+                <button class="btn btn-primary" onclick="addUser()">Add user</button>
+            </div>
+            <div id="divEditUser" class="col-sm-3" style="display: none;">
+                ID: <input type="text" id="edit_id" class="form-control disabled" disabled>
+                User name: <input type="text" id="edit_name" class="form-control">
+                Age: <input type="text" id="edit_age" class="form-control">
+                <button class="btn btn-primary" onclick="editUser()">Edit user</button>
+            </div>
+        </div>
+    </div>
+
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="user-list">
+        </tbody>
+    </table>
+    <script>
+        // post load, call the refreshUserList
+        window.onload = function() {
+            refreshUserList();
+        }
+    </script>
+</body>
+</html>
