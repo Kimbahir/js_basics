@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <h1>Currency conversion</h1>
+    <hr>
+    <div class="row">
+        <div class="col">
+            <!-- make an input with the id "units" that is only allowed to take integer values from 0 and up -->
+            <input type="number" id="units" min="0" step="1" value="1">
+            <!-- make an input with the id "price" that is allowed to take decimal values -->
+            <input type="number" id="price" step="0.001" value="1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h2>From DKK</h2>
+            <button id="DKKtoNOK" class="btn btn-primary" onclick="convert('DKKtoNOK')">DKK to NOK</button>
+            <button id="DKKtoEUR" class="btn btn-primary" onclick="convert('DKKtoEUR')">DKK to EUR</button>
+        </div>
+        <div class="col">
+            <h2>From NOK</h2>
+            <button id="NOKtoDKK" class="btn btn-primary" onclick="convert('NOKtoDKK')">NOK to DKK</button>
+            <button id="NOKtoEUR" class="btn btn-primary" onclick="convert('NOKtoEUR')">NOK to EUR</button>
+        </div>
+        <div class="col">
+            <h2>From EUR</h2>
+            <button id="EURtoDKK" class="btn btn-primary" onclick="convert('EURtoDKK')">EUR to DKK</button>
+            <button id="EURtoNOK" class="btn btn-primary" onclick="convert('EURtoNOK')">EUR to NOK</button>
+        </div>
+
+    </div>
+
+
+    <div class="text-center mt-4">
+        <label id="result" class="display-4"></label>
+    </div>
+
+</body>
+</html>
