@@ -7,7 +7,6 @@
     <button id="EURtoNOK" class="btn btn-primary">EUR to NOK</button>
 */
 
-
 let DKK = {};
 let NOK = {};
 let EUR = {};
@@ -50,6 +49,25 @@ function convert(conversion) {
     }
 
     defaultColorButtonsButThis(conversion);
+}
+
+
+// make a conversino method that takes the from and to currency as arguments
+// and returns the conversion rate
+function conversion(from, to) {
+    if (from === 'DKK' && to === 'NOK') {
+        return DKK.data.dkk.nok;
+    } else if (from === 'DKK' && to === 'EUR') {
+        return DKK.data.dkk.eur;
+    } else if (from === 'NOK' && to === 'DKK') {
+        return NOK.data.nok.dkk;
+    } else if (from === 'NOK' && to === 'EUR') {
+        return NOK.data.nok.eur;
+    } else if (from === 'EUR' && to === 'DKK') {
+        return EUR.data.eur.dkk;
+    } else if (from === 'EUR' && to === 'NOK') {
+        return EUR.data.eur.nok;
+    }
 }
 
 // make the page call convert with "DKKtoNOK" when the page loads
